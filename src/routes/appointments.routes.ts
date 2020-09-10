@@ -19,13 +19,18 @@ appointmentsRouter.post('/', (request, response) => {
   } 
 
   
-  const appointment = appointmentsRepository.create(provider, parsedDate);
+  const appointment = appointmentsRepository.create({
+    provider, 
+    date: parsedDate
+  });
 
   return response.json(appointment);
 });
 
 appointmentsRouter.get('/', (request, response) => {
-  return response.json({ message: "get"})
+  const appointments = appointmentsRepository.list();
+
+  return response.json(appointments);
 })
 
 export default appointmentsRouter;
