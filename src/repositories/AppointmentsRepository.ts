@@ -1,38 +1,26 @@
-import { isEqual } from "date-fns";
+import { EntityRepository, Repository } from 'typeorm';
 
 import Appointment from "../models/Appointments";
 
-interface appointmentsDTO {
-  provider: string;
-  date: Date;
-}
+@EntityRepository(Appointment)
+class AppointmentsRepository extends Repository<Appointment> {
 
-class AppointmentsRepository {
-  private appointments: Appointment[];
-
-  constructor(){
-    this.appointments = [];
-  }
-
-  public findByDate(date: Date): Appointment | null {
-    const findAppoitment = this.appointments.find(appointment => 
-      isEqual(date, appointment.date)
-    );
+  public async findByDate(date: Date): Promise<Appointment | null> {
+    const findAppoitment = await this.findOne({
+      where: { date },
+    })
 
     return findAppoitment || null;
-  }
-
-  public create({ provider, date }: appointmentsDTO ): Appointment {
-    const appointment = new Appointment({ provider, date });
-
-    this.appointments.push(appointment);
-
-    return appointment;
-  }
-
-  public list(): Appointment[] {
-    return this.appointments;
   }
 }
 
 export default AppointmentsRepository;
+
+/** 
+ * Quando se usa async/await tranforma a classe em uma promise. 
+ * Logo, a resposta pode ser obtida assim:
+ * findByDate(date).then( res => {} ).catch( err => {} )
+ * onde res é do tipo Appointment ou null (nesse caso)
+ * OU
+ * const res = await findByDate(date)
+ */
