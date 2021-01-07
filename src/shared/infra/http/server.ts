@@ -7,9 +7,10 @@ import 'express-async-errors';
 import routes from './routes';
 
 import uploadConfig from '@config/upload';
+import AppError from '@shared/errors/AppError';
 
 import '@shared/infra/typeorm';
-import AppError from '@shared/errors/AppError';
+import '@shared/container';
 
 const app = express();
 
@@ -32,7 +33,7 @@ app.use(
     }
 
     console.log(err);
-    
+
     return response.status(500).json({
       status: 'error',
       message: 'Internal server error',
