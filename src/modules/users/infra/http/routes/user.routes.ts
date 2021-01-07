@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import multer from 'multer';
 
+import UsersRepository from '@modules/users/infra/typeorm/repositories/UsersRepository';
 import CreateUserService from '@modules/users/services/CreateUserService';
 import UpdateUserAvatarService from '@modules/users/services/UpdateUserAvatarService';
 
@@ -14,7 +15,8 @@ const upload = multer(uploadConfig);
 usersRouter.post('/', async (request, response) => {
   const { name, email, password } = request.body;
 
-  const createUser = new CreateUserService();
+  const userRepository = new UsersRepository();
+  const createUser = new CreateUserService(userRepository);
 
   const userResp = await createUser.execute({
     name,
@@ -23,8 +25,8 @@ usersRouter.post('/', async (request, response) => {
   });
 
   const user = {
-    id: userResp.id, 
-    name: userResp.name, 
+    id: userResp.id,
+    name: userResp.name,
     email: userResp.email,
     avatar: userResp.avatar,
     created_at: userResp.created_at,
@@ -35,11 +37,12 @@ usersRouter.post('/', async (request, response) => {
 });
 
 usersRouter.patch(
-  '/avatar', 
-  ensureAuth, 
-  upload.single('avatar'), 
+  '/avatar',
+  ensureAuth,
+  upload.single('avatar'),
   async (request, response) => {
-    const updateUserAvatar = new UpdateUserAvatarService();
+    const userRepository = new UsersRepository();
+    const updateUserAvatar = new UpdateUserAvatarService(userRepository);
 
     const userResp = await updateUserAvatar.execute({
       user_id: request.user.id,
@@ -47,14 +50,14 @@ usersRouter.patch(
     });
 
     const user = {
-      id: userResp.id, 
-      name: userResp.name, 
+      id: userResp.id,
+      name: userResp.name,
       email: userResp.email,
       avatar: userResp.avatar,
       created_at: userResp.created_at,
       updated_at: userResp.updated_at
     }
-    
+
     return response.json(user);
 });
 
