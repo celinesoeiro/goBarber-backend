@@ -1,7 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, ManyToOne, JoinColumn } from 'typeorm';
 
-import User from './Users';
-
+import User from '@modules/users/infra/typeorm/entities/Users';
 /**
  *  Declarando um decorator.
  * Quando declaramos um decorator em cima de uma classe significa que estamos 
