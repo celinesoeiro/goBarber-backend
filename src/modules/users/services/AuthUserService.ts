@@ -34,7 +34,7 @@ class AuthUserService {
     const user = await this.userRepository.findByEmail(email);
 
     if (!user){
-      throw new AppError('Incorrect email/password combination.', 401);
+      throw new AppError('User does not exist.', 401);
     }
 
     const passwordMatched = await this.hashProvider.compareHash(
