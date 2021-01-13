@@ -34,13 +34,13 @@ describe('CreateUser', () => {
     );
 
     await createUser.execute({
-      email: 'janedoe@maail.com',
+      email: 'janedoe@mail.com',
       name: 'Jane Doe',
       password: '123456',
     });
 
     expect(createUser.execute({
-      email: 'janedoe@maail.com',
+      email: 'janedoe@mail.com',
       name: 'Jane Doe',
       password: '123456',
     })).rejects.toBeInstanceOf(AppError);
