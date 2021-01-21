@@ -21,8 +21,8 @@ class SendForgotPasswordService{
     @inject('MailProvider')
     private mailProvider: IMailProvider,
 
-    @inject('UserTokenRepository')
-    private usertokensRepository: IUserTokenRepository,
+    @inject('UserTokensRepository')
+    private userTokensRepository: IUserTokenRepository,
   ){}
 
   public async execute( { email }: IRequest ): Promise<void> {
@@ -32,9 +32,12 @@ class SendForgotPasswordService{
       throw new AppError('User does not exist')
     }
 
-    await this.usertokensRepository.generate(user.id);
+    const { token } = await this.userTokensRepository.generate(user.id);
 
-    this.mailProvider.sendMail(email, 'pedido de recuperação de senha recebido')
+    await this.mailProvider.sendMail(
+      email,
+      `pedido de recuperação de senha recebido: ${token}`,
+    );
 
   }
 }

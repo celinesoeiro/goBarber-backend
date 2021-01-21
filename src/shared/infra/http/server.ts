@@ -19,7 +19,7 @@ app.use(cors());
 app.use(express.json());
 
 // Rota pra acessar os caminhos das imagens atraves do browser
-app.use('/files', express.static(uploadConfig.directory));
+app.use('/files', express.static(uploadConfig.uploadsFolder));
 app.use(routes);
 
 // Middleware para tratativa global de errors
