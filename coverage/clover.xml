@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1612830579272" clover="3.2.0">
-  <project timestamp="1612830579272" name="All files">
-    <metrics statements="400" coveredstatements="396" conditionals="58" coveredconditionals="55" methods="14" coveredmethods="14" elements="472" coveredelements="465" complexity="0" loc="400" ncloc="400" packages="2" files="7" classes="7"/>
+<coverage generated="1612881670279" clover="3.2.0">
+  <project timestamp="1612881670280" name="All files">
+    <metrics statements="432" coveredstatements="430" conditionals="64" coveredconditionals="62" methods="16" coveredmethods="16" elements="512" coveredelements="508" complexity="0" loc="432" ncloc="432" packages="2" files="8" classes="8"/>
     <package name="appointments.services">
       <metrics statements="54" coveredstatements="54" conditionals="5" coveredconditionals="5" methods="2" coveredmethods="2"/>
       <file name="CreateAppointmentService.ts" path="C:\Users\celin\Desktop\Cursos\GoStack\gobarber\backend\src\modules\appointments\services\CreateAppointmentService.ts">
@@ -63,7 +63,7 @@
       </file>
     </package>
     <package name="users.services">
-      <metrics statements="346" coveredstatements="342" conditionals="53" coveredconditionals="50" methods="12" coveredmethods="12"/>
+      <metrics statements="378" coveredstatements="376" conditionals="59" coveredconditionals="57" methods="14" coveredmethods="14"/>
       <file name="AuthUserService.ts" path="C:\Users\celin\Desktop\Cursos\GoStack\gobarber\backend\src\modules\users\services\AuthUserService.ts">
         <metrics statements="63" coveredstatements="63" conditionals="7" coveredconditionals="7" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
@@ -303,8 +303,43 @@
         <line num="61" count="1" type="stmt"/>
         <line num="62" count="1" type="stmt"/>
       </file>
+      <file name="ShowProfileService.ts" path="C:\Users\celin\Desktop\Cursos\GoStack\gobarber\backend\src\modules\users\services\ShowProfileService.ts">
+        <metrics statements="32" coveredstatements="32" conditionals="5" coveredconditionals="5" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="15" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+      </file>
       <file name="UpdateProfileService.ts" path="C:\Users\celin\Desktop\Cursos\GoStack\gobarber\backend\src\modules\users\services\UpdateProfileService.ts">
-        <metrics statements="67" coveredstatements="65" conditionals="15" coveredconditionals="14" methods="2" coveredmethods="2"/>
+        <metrics statements="67" coveredstatements="67" conditionals="16" coveredconditionals="16" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -326,48 +361,48 @@
         <line num="19" count="1" type="stmt"/>
         <line num="20" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="21" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="22" count="5" type="stmt"/>
-        <line num="23" count="5" type="stmt"/>
-        <line num="24" count="5" type="stmt"/>
-        <line num="25" count="5" type="stmt"/>
-        <line num="26" count="5" type="stmt"/>
-        <line num="27" count="5" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
+        <line num="23" count="6" type="stmt"/>
+        <line num="24" count="6" type="stmt"/>
+        <line num="25" count="6" type="stmt"/>
+        <line num="26" count="6" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
         <line num="29" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="30" count="5" type="cond" truecount="1" falsecount="0"/>
-        <line num="31" count="5" type="stmt"/>
-        <line num="32" count="5" type="cond" truecount="0" falsecount="1"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="35" count="5" type="stmt"/>
+        <line num="30" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="31" count="6" type="stmt"/>
+        <line num="32" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="5" type="cond" truecount="1" falsecount="0"/>
         <line num="36" count="5" type="stmt"/>
-        <line num="37" count="5" type="stmt"/>
-        <line num="38" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="37" count="6" type="stmt"/>
+        <line num="38" count="6" type="cond" truecount="2" falsecount="0"/>
         <line num="39" count="1" type="stmt"/>
         <line num="40" count="1" type="stmt"/>
         <line num="41" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="42" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="42" count="6" type="cond" truecount="2" falsecount="0"/>
         <line num="43" count="1" type="stmt"/>
         <line num="44" count="1" type="stmt"/>
         <line num="45" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="46" count="5" type="cond" truecount="3" falsecount="0"/>
+        <line num="46" count="6" type="cond" truecount="3" falsecount="0"/>
         <line num="47" count="2" type="stmt"/>
         <line num="48" count="2" type="stmt"/>
         <line num="49" count="2" type="stmt"/>
         <line num="50" count="2" type="stmt"/>
-        <line num="51" count="5" type="stmt"/>
-        <line num="52" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="51" count="6" type="stmt"/>
+        <line num="52" count="6" type="cond" truecount="1" falsecount="0"/>
         <line num="53" count="1" type="stmt"/>
         <line num="54" count="1" type="stmt"/>
         <line num="55" count="1" type="stmt"/>
         <line num="56" count="1" type="stmt"/>
-        <line num="57" count="5" type="stmt"/>
-        <line num="58" count="5" type="stmt"/>
-        <line num="59" count="5" type="stmt"/>
-        <line num="60" count="5" type="stmt"/>
-        <line num="61" count="5" type="stmt"/>
-        <line num="62" count="5" type="stmt"/>
-        <line num="63" count="5" type="stmt"/>
+        <line num="57" count="6" type="stmt"/>
+        <line num="58" count="6" type="stmt"/>
+        <line num="59" count="6" type="stmt"/>
+        <line num="60" count="6" type="stmt"/>
+        <line num="61" count="6" type="stmt"/>
+        <line num="62" count="6" type="stmt"/>
+        <line num="63" count="6" type="stmt"/>
         <line num="64" count="1" type="stmt"/>
         <line num="65" count="1" type="stmt"/>
         <line num="66" count="1" type="stmt"/>
